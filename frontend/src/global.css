@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playball&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F3EFEC;
+  --color-bg-secondary: #E8E3DE;
+
+  --color-text: #232925;
+  --color-button: #FFFFFF;
+
+  --color-primary: #E8E3DE;
+  --color-secondary: #AE9A81;
+  --color-accent: #535442;
+
+  --font-family-noto: 'Noto Serif', serif;
+  --font-family-nunito: 'Nunito', sans-serif;
+  --font-family-playball: 'Playball', cursive;
+}
+
+:root {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-family: var(--font-family-nunito);
+}
