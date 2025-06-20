@@ -8,7 +8,7 @@ build/
 .cache/
 .temp/
 
-# Ambiente
+# Ambient
 .env
 .env.local
 .env.development
