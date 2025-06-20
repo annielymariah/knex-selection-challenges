@@ -1,11 +1,10 @@
-function App() {
-  return (
-    <>
-      <div>
-        <p className="text-secondary">Em desenvolvimento</p>
-      </div>
-    </>
-  )
-}
+import { AppRouter } from "./routes/AppRouter";	
+import { useEffect } from "react";
 
-export default App
+export const App = () => {
+  useEffect(() => {
+    fetch("")
+  }, []);
+
+  return <AppRouter />;
+};
