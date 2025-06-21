@@ -23,7 +23,7 @@ export function UserInfo({ user }: { user: User }) {
         <div className="flex items-center gap-2">
           <FaMapMarkerAlt className="flex-shrink-0" />
           <p>
-            {user.location.city}, {user.location.country}
+            {user.location.city}, {user.location.state}
           </p>
         </div>
       </div>

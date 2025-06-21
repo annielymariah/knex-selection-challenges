@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { UserService } from "../../services/userService";
 import type { User } from "../../types/userTypes";
+import { Link } from "react-router-dom";
 
 export default function TopUsers() {
   const [users, setUsers] = useState<User[]>([]);
@@ -28,12 +29,11 @@ export default function TopUsers() {
       <div className="flex justify-between items-center mb-4 bg-bg-secondary pb-1">
         <span className=" font-bold font-family-noto">Top</span>
         <span className="font-family-noto ml-1">Storytellers</span>
-        <a
-          href="#"
+        <Link to="/top-users"
+        aria-label="Ver todos os usuários"
           className="ml-auto underline text-primary font-family-noto hover:text-accent transition-colors"
-        >
-          Ver todos
-        </a>
+        > </Link>
+        Ver todos
       </div>
 
       {users.map((user) => (

@@ -10,6 +10,7 @@ export interface User {
   };
   location: {
     country: string;
+    state: string;
     city: string;
   };
   dob: {
