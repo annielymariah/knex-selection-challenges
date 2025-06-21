@@ -5,7 +5,7 @@ export const UserService = {
   getRandomUser: async (): Promise<User> => {
     try {
       const response = await axios.get<{ results: User[] }>(
-        'https://randomuser.me/api/'
+        'https://randomuser.me/api/?nat=br'
       );
       return response.data.results[0];
     } catch (error) {
@@ -16,7 +16,7 @@ export const UserService = {
   getMultipleUsers: async (count: number = 1): Promise<User[]> => {
     try {
       const response = await axios.get<{ results: User[] }>(
-        `https://randomuser.me/api/?results=${count}`
+        `https://randomuser.me/api/?nat=br&results=${count}`
       );
       return response.data.results;
     } catch (error) {

@@ -1,5 +1,5 @@
 export interface User {
-  id?: string; 
+  id?: string;
   name: {
     first: string;
     last: string;
@@ -11,6 +11,10 @@ export interface User {
   location: {
     country: string;
     city: string;
+  };
+  dob: {
+    age: number;
+    date?: Date;
   };
   picture: {
     large: string;
