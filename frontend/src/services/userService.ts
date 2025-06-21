@@ -13,7 +13,7 @@ export const UserService = {
     }
   },
 
-  getMultipleUsers: async (count: number = 1): Promise<User[]> => {
+  getMultipleUsers: async (count: number = 1): Promise<User[]> => {  
     try {
       const response = await axios.get<{ results: User[] }>(
         `https://randomuser.me/api/?nat=br&results=${count}`
