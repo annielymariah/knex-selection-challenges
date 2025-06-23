@@ -1,9 +1,9 @@
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import type { User } from "../../types/userTypes";
+import type { User } from "../../../types/userTypes";
 
 export function UserInfo({ user }: { user: User }) {
   return (
-    <div className="mt-14 flex flex-col gap-2 font-family-noto">
+    <div className="mt-14 flex flex-col gap-2 font-family-noto items-center">
       
       <div className="flex flex-row gap-1">
       <h2 className="text-[1.25rem] font-bold">

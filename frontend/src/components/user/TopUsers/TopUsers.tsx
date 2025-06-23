@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { UserService } from "../../services/userService";
-import type { User } from "../../types/userTypes";
+import { UserService } from "../../../services/userService";
+import type { User } from "../../../types/userTypes";
 import { Link } from "react-router-dom";
+import UserCard from "../UserCard";
 
 export default function TopUsers() {
   const [users, setUsers] = useState<User[]>([]);
@@ -29,32 +30,21 @@ export default function TopUsers() {
       <div className="flex justify-between items-center mb-4 bg-bg-secondary pb-1">
         <span className=" font-bold font-family-noto">Top</span>
         <span className="font-family-noto ml-1">Storytellers</span>
-        <Link to="/top-users"
-        aria-label="Ver todos os usuários"
+        {/* Atualizar posteriormente com a rota para a página de visualizar todos os usuários */}
+        <Link
+          to="#"
+          aria-label="Ver todos os usuários"
           className="ml-auto underline text-primary font-family-noto hover:text-accent transition-colors"
-        > </Link>
-        Ver todos
+        >
+          Ver todos
+        </Link>
       </div>
 
-      {users.map((user) => (
-        <div key={user.login.username}>
-          <div className="my-1.5 flex flex-row items-center gap-4">
-            <img
-              className="w-16 h-16 rounded-full bg-accent border-3 border-bg object-cover"
-              src={user.picture.large}
-              alt={`${user.name.first} ${user.name.last}`}
-            />
-            <div className="flex flex-col items-start">
-              <h3 className="font-semibold font-family-noto">
-                {user.name.first} {user.name.last}
-              </h3>
-              <p className="text-[0.875rem] text-primary">
-                @{user.login.username}
-              </p>
-            </div>
-          </div>
-        </div>
-      ))}
+      <div className="flex flex-col justify-items-normal max-w-full bg-bg p-4 rounded-b-xl">
+        {users.map((user) => (
+          <UserCard {...user} />
+        ))}
+      </div>
     </div>
   );
 }

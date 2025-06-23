@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { UserService } from "../../services/userService";
-import type { User } from "../../types/userTypes";
+import { UserService } from "../../../services/userService";
+import type { User } from "../../../types/userTypes";
 
 // Componentes Atômos
 

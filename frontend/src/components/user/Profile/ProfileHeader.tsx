@@ -1,4 +1,4 @@
-import type { User } from "../../types/userTypes";
+import type { User } from "../../../types/userTypes";
 
 export function ProfileHeader({ user }: { user: User }) {
   return (
