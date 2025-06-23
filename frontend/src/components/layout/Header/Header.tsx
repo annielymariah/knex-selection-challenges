@@ -1,7 +1,7 @@
 import { FaBell } from "react-icons/fa";
 import { BsChat } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import Search from "../Search/Search";
+import Search from "../../ui/Search";
 import MenuHamburger from "./MenuHamburger";
 
 export default function Header() {
@@ -18,6 +18,7 @@ export default function Header() {
         </div>
 
         {/* Menu de navegação */}
+        
         <nav className="hidden sm:flex items-center gap-4 flex-none">
           <button
             aria-label="Chat"
@@ -36,6 +37,7 @@ export default function Header() {
         </nav>
 
         {/* Menu de mobile */}
+        
         <div className="sm:hidden flex items-center gap-4 flex-none">
           <MenuHamburger />
         </div>
