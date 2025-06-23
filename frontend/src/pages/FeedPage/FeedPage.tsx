@@ -1,9 +1,14 @@
-import Profile from "../../components/Profile/Profile";
+import Layout from "../../components/layout/LayoutComponents";
+import Main from "../../components/layout/MainContent";
+import Sidebar from "../../components/layout/Sidebar";
 
 export default function FeedPage() {
   return (
     <div>
-      <Profile></Profile>
+      <Layout>
+        <Sidebar/>
+        <Main/>
+      </Layout>
     </div>
   );
 }

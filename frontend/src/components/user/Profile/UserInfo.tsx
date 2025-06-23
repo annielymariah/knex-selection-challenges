@@ -1,5 +1,5 @@
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import type { User } from "../../../types/userTypes";
+import type { User } from "../../../api/types/userTypes";
 
 export function UserInfo({ user }: { user: User }) {
   return (
