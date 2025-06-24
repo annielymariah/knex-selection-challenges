@@ -7,6 +7,9 @@ export interface User {
   email: string;
   login: {
     username: string;
+    uuid: string;
+    sha256: string; 
+    password: string;
   };
   location: {
     country: string;

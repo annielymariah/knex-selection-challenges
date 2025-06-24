@@ -42,7 +42,7 @@ export default function TopUsers() {
 
       <div className="flex flex-col justify-items-normal max-w-full bg-bg p-4 rounded-b-xl">
         {users.map((user) => (
-          <UserCard {...user} />
+          <UserCard user={user} type={false}/>
         ))}
       </div>
     </div>

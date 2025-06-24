@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { UserService } from "../../../api/services/userService";
 import type { User } from "../../../api/types/userTypes";
-
-// Componentes Atômos
-
 import { ProfileHeader } from "./ProfileHeader";
 import { UserInfo } from "./UserInfo";
 import { UserStats } from "./UserStats";
