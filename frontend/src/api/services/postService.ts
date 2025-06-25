@@ -40,7 +40,7 @@ export const postService = {
       const response = await jsonPlaceholderClient.patch<Post>(`/posts/${id}`, post);
       return response.data;
     } catch (error) {
-      console.error(`Error updating post ${id}:`, error);
+      console.error(`Erro ao atualizar a postagem id ${id}:`, error);
       throw new Error(`Falha ao atualizar postagem ${id}`);
     }
   },

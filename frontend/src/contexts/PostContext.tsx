@@ -21,10 +21,10 @@ export const PostProvider: React.FC<{children: React.ReactNode}> = ({ children }
     try {
       setLoading(true);
       setError(null);
-      const fetchedPosts = await postService.getPosts();
+      const fetchedPosts = await postService.getPosts(0); //Número de postagens futuramente removível.
       setPosts(fetchedPosts);
     } catch (err) {
-      setError('Failed to fetch posts');
+      setError('Falha ao carregar postagens');
       console.error(err);
     } finally {
       setLoading(false);
