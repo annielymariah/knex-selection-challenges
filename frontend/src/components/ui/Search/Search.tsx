@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Search() {
   return (
-<div className="relative flex items-center">
+<div className="relative flex items-center"> {/* Container para o campo de pesquisa, lógica incompleta */}
             <input
               type="text"
               placeholder="Pesquisar..."

@@ -9,8 +9,8 @@ interface LayoutProps {
 export default function LayoutComponents({ children }: LayoutProps) {
   return (
     <div className="h-full flex flex-col">
-      <Header />
-      <div className="flex flex-col lg:flex-row h-full my-5 mx-6 lg:mx-20 gap-6">{children}</div>
+      <Header /> 
+      <div className="flex flex-col lg:flex-row h-full my-5 mx-6 lg:mx-20 gap-6">{children}</div> {/* Área de main */}
       <Footer />
     </div>
   );

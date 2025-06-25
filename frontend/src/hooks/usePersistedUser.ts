@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { UserService } from "../services/userService";
-import type { User } from "../types/userTypes";
+import { UserService } from "../api/services/userService";
+import type { User } from "../api/types/userTypes";
 import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
@@ -17,6 +17,7 @@ export default function usePersistedUser() {
             if (savedUser && savedHash) {
                 try {
                     const user: User = JSON.parse(savedUser);
+                    console.log("Usuário armazenado no localStorage:", user); // Log do usuário, remover depois de testes >:P
                     
                     if (user.login.sha256 === savedHash) {
                         setLoggedUser(user);

@@ -8,12 +8,12 @@ type UserCardProps = {
 export default function UserCard({ user, type }: UserCardProps) {
   let widthImg: string, heightImg: string, titleSize: string, fontSize: string;
 
-  if (!type) {
+  if (!type) { // Tipo para TopUsers
     widthImg = "w-16";
     heightImg = "h-16";
     titleSize = "text-[1rem]";
     fontSize = "text-[0.875rem]";
-  } else {
+  } else { // Tipo para PostList
     widthImg = "w-20";
     heightImg = "h-20";
     titleSize = "text-[1.25rem]";
