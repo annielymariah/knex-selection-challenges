@@ -1,4 +1,5 @@
 import type { User } from "../../../api/types/userTypes";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 type UserCardProps = {
   user: User;
@@ -34,6 +35,9 @@ export default function UserCard({ user, type }: UserCardProps) {
           </h3>
           <p className={`${fontSize} text-primary`}>
             @{user.login.username}
+          </p>
+          <p className={!type ? "hidden" : "text-primary flex row gap-1"}>
+            <FaMapMarkerAlt/>{user.location.city}, {user.location.state}
           </p>
         </div>
       </div>
