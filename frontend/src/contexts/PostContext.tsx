@@ -19,7 +19,7 @@ export const PostProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Carrega posts do localStorage ao inicializar
+    // Carrega posts do localStorage ao inicializar (Foi feito pra tentar mitigar a questão da API retornar só 1 id, o 101)
     useEffect(() => {
         const loadInitialPosts = async () => {
             try {

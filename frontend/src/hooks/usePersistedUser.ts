@@ -1,4 +1,3 @@
-// usePersistedUser.ts
 import { useState, useEffect } from "react";
 import { UserService } from "../api/services/userService";
 import type { User } from "../api/types/userTypes";

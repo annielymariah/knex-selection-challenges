@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FeedPage from "../pages/FeedPage/FeedPage";
+import FeedPage from "../pages/FeedPage";
 
 export const AppRouter = () => {
   return (

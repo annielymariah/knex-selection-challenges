@@ -1,1 +1,1 @@
-export * from "./EditPostModal"
+export { default } from "./EditPostModal"

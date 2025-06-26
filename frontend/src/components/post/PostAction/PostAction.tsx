@@ -1,5 +1,5 @@
-import DeletePostButton from "../DeletePostButton/DeletePostButton";
-import EditPostButton from "../EditPostButton/EditPostButton";
+import DeletePostButton from "../DeletePostButton";
+import EditPostButton from "../EditPostButton";
 
 interface PostActionsProps {
   postId: number;

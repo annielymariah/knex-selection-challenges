@@ -1,7 +1,7 @@
 import type { Post } from "../../../api/types/postTypes";
 import type { User } from "../../../api/types/userTypes";
 import UserCard from "../../user/UserCard";
-import PostActions from "../PostAction/PostAction";
+import PostActions from "../PostAction";
 
 interface PostItemProps {
   post: Post;
