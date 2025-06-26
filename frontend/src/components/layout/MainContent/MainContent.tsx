@@ -1,4 +1,4 @@
-import CreatePostForm from "../../post/CreatePostForm";
+import CreatePostForm from "../../post/CreatePostForm/CreatePostForm";
 import PostList from "../../post/PostList";
 import { PostProvider } from "../../../contexts";
 

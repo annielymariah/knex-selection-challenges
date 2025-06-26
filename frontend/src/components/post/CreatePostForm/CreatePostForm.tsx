@@ -47,10 +47,7 @@ export default function CreatePostForm() {
         userId: userLogged.login.id 
       };
 
-      console.log("Dados sendo enviados para a API:", postData); // Log dos dados que serão enviados, remover depois de testes >:C
-
       const response = await postService.createPost(postData);
-      console.log("Resposta da API:", response); // Log da resposta da API, remover depois de testes =O
     
       addPost(response);
       
@@ -99,14 +96,14 @@ export default function CreatePostForm() {
       )}
 
       {success && (
-        <div className="text-green-600 text-sm p-2">
+        <div className="text-green-600 text-sm">
           Post criado com sucesso
         </div>
       )}
 
       <button
         type="submit"
-        className="bg-primary text-white px-4 py-4 rounded-lg hover:bg-primary-dark transition-colors w-full flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
+        className="bg-text-secondary text-white px-4 py-4 rounded-lg hover:bg-primary transition-colors w-full flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={isSubmitting}
       >
         {isSubmitting ? (
