@@ -6,7 +6,7 @@ interface PostActionsProps {
   onEditClick: () => void;
 }
 
-const PostActions = ({ postId, onEditClick }: PostActionsProps) => {
+const PostActionsTop = ({ postId, onEditClick }: PostActionsProps) => {
   return (
     <div className="flex">
       <EditPostButton
@@ -18,4 +18,4 @@ const PostActions = ({ postId, onEditClick }: PostActionsProps) => {
   );
 };
 
-export default PostActions;
+export default PostActionsTop;

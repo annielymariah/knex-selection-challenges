@@ -1,7 +1,8 @@
 import type { Post } from "../../../api/types/postTypes";
 import type { User } from "../../../api/types/userTypes";
 import UserCard from "../../user/UserCard";
-import PostActions from "../PostAction";
+import { PostActionsBellow } from "../PostActionsBellow";
+import PostActions from "../PostActionsTop";
 
 interface PostItemProps {
   post: Post;
@@ -10,18 +11,20 @@ interface PostItemProps {
   onEditClick: () => void;
 }
 
-const PostItem = ({ post, displayUser, isCurrentUserAuthor, onEditClick }: PostItemProps) => {
+const PostItem = ({
+  post,
+  displayUser,
+  isCurrentUserAuthor,
+  onEditClick,
+}: PostItemProps) => {
   return (
     <li key={post.id}>
       <div className="flex flex-col border p-1 px-5 border-accent rounded-lg mb-4 bg-bg">
         <div className="flex justify-between items-start">
           <UserCard user={displayUser} type={true} />
-          
+
           {isCurrentUserAuthor && (
-            <PostActions 
-              postId={post.id} 
-              onEditClick={onEditClick} 
-            />
+            <PostActions postId={post.id} onEditClick={onEditClick} />
           )}
         </div>
 
@@ -35,6 +38,7 @@ const PostItem = ({ post, displayUser, isCurrentUserAuthor, onEditClick }: PostI
             Publicação de um usuário anterior
           </p>
         )}
+        <PostActionsBellow />
       </div>
     </li>
   );
