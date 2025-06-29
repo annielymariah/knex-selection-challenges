@@ -7,10 +7,16 @@ import { usePosts } from "../../../contexts";
 const postSchema = z.object({
   title: z.string()
     .min(5, "O título deve ter pelo menos 5 caracteres")
-    .max(100, "O título não pode ter mais que 100 caracteres"),
+    .max(100, "O título não pode ter mais que 100 caracteres")
+    .refine(value => value.trim().length > 0, {
+      message: "O título não pode conter apenas espaços"
+    }),
   body: z.string() 
     .min(10, "O conteúdo deve ter pelo menos 10 caracteres")
-    .max(1000, "O conteúdo não pode ter mais que 1000 caracteres"),
+    .max(1000, "O conteúdo não pode ter mais que 1000 caracteres")
+    .refine(value => value.trim().length > 0, {
+      message: "O texto não pode conter apenas espaços"
+    }),
   userId: z.number().positive("ID do usuário inválido"),
 });
 
@@ -72,7 +78,7 @@ export default function CreatePostForm() {
   }
 
   return (
-    <form ref={formRef} className="flex flex-col gap-4" onSubmit={submitPost}>
+    <form ref={formRef} className="flex flex-col gap-4 w-full" onSubmit={submitPost}>
       <div className="space-y-2">
         <input
           name="title"

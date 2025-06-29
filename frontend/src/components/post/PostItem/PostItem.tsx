@@ -28,10 +28,10 @@ const PostItem = ({
           )}
         </div>
 
-        <h3 className="font-bold capitalize text-[1.25rem] mb-4 mt-2">
+        <h3 className="font-bold capitalize text-[1.25rem] mb-4 mt-2 w-full wrap-break-word">
           {post.title}
         </h3>
-        <p className="text-[0.875rem] mb-6">{post.body}</p>
+        <p className="text-[0.875rem] mb-6 w-full wrap-break-word">{post.body}</p>
 
         {!isCurrentUserAuthor && (
           <p className="text-xs text-gray-400 pb-4">
