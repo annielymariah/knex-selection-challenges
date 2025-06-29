@@ -3,6 +3,7 @@
 <h2 align="center">StoryTelling: Plataforma de Pequenas Histórias</h2>
 
 **StoryTelling** é uma aplicação web desenvolvida para o desafio da seleção front-end da Knex. Seu objetivo é simular uma rede social de pequenas histórias, com funcionalidades de visualização, criação, edição e exclusão de posts, utilizando dados de usuários gerados dinamicamente.
+A aplicação está disponível em produção e pode ser acessada pelo seguinte link: [https://storytelling-knex.vercel.app/](https://storytelling-knex.vercel.app/). O deploy foi realizado utilizando a plataforma Vercel.
 
 ---
 
@@ -16,6 +17,7 @@
 * **Tailwind CSS (v4.1.10)** — Estilização responsiva e moderna
 * **Universal Cookie (v8.0.1)** — Gerenciamento de cookies
 * **Prettier e EsLint** — Para organização de código front-end.
+* **Vercel** — Para deploy.
 
 ---
 
@@ -77,6 +79,9 @@ Desenvolver uma tela com operações de **CRUD (Create, Read, Update, Delete)** 
 * Criação de novos posts
 * Gerenciamento básico de estado e persistência com cookies
 * Estilização moderna utilizando Tailwind CSS
+  
+---
+
 ### 🎨 Imagens da Aplicação e Prototipação do Figma
 
 Abaixo segue as imagens da aplicação em tempo real, caso deseje comparar com o Figma criado por mim, clique aqui: [Figma](https://www.figma.com/design/dXCovOxqN0KRV6wPs9wK9I/Storytelling?node-id=0-1&t=uwxonSkhAn4m3Bdc-1)
